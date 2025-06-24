@@ -36,7 +36,7 @@ def search():
 plan = [] # will store temporary exercise plan
 
 @app.route('/add_to_plan', methods=['POST'])
-# Add exercises to "my exercise plan"
+# add exercises to "my exercise plan"
 def add_to_plan():
     exercise = {
         'name': request.form['name'],
@@ -50,7 +50,7 @@ def add_to_plan():
     return redirect(request.referrer)
 
 @app.route('/my_exercise_plan')
-# View "my exercise plan" page
+# view "my exercise plan" page
 def view_plan():
     return render_template('my_exercise_plan.html', plan=plan)
 
