@@ -1,0 +1,39 @@
+Results Page
+<!Doctype html>
+<head>
+    <title>Flex - Results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <p>Exercises for {{ muscle }}</p>
+
+    {% if results %}
+    <ul>
+        {% for exercise in results %}
+        <li>
+            <strong>{{ exercise.name }}</strong><br>
+            Muscle: {{ exercise.primaryMuscles }}<br>
+            Difficulty: {{ exercise.level }}<br>
+            <a href="{{ exercise.video_url }}">Watch Instructions</a>
+
+            <form action="{{ url_for('add_to_plan') }}" method="post">
+                <input type="hidden" name="muscle" value="{{ exercise.primaryMuscles }}">
+                <input type="hidden" name="name" value="{{ exercise.name }}">
+                <input type="hidden" name="level" value="{{ exercise.level }}">
+                <input type="hidden" name="video_url" value="{{ exercise.video_url }}">
+                <button type="submit">Add to My Exercise Plan</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No exercises found for "{{ muscle }}" at the "{{ level }}" difficulty.</p>
+    {% endif %}
+    <br>
+    <a href="{{ url_for('view_plan') }}">
+        <button>View My Exercise Plan</button>
+    </a>
+    <br><br>
+    <br><a href="/">Resume Search</a>
+</body> 
+</html>
