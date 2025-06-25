@@ -12,15 +12,15 @@ Results Page
         {% for exercise in results %}
         <li>
             <strong>{{ exercise.name }}</strong><br>
-            Muscle: {{ exercise.primaryMuscles }}<br>
+            Muscle: {{ exercise.muscle }}<br>
             Difficulty: {{ exercise.level }}<br>
-            <a href="{{ exercise.video_url }}">Watch Instructions</a>
+            Instructions: {{ exercise.instructions }}<br>
 
             <form action="{{ url_for('add_to_plan') }}" method="post">
                 <input type="hidden" name="muscle" value="{{ exercise.primaryMuscles }}">
                 <input type="hidden" name="name" value="{{ exercise.name }}">
                 <input type="hidden" name="level" value="{{ exercise.level }}">
-                <input type="hidden" name="video_url" value="{{ exercise.video_url }}">
+                <input type="hidden" name="instructions" value="{{ exercise.instructions }}">
                 <button type="submit">Add to My Exercise Plan</button>
             </form>
         </li>
