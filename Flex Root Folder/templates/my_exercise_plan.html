@@ -1,0 +1,26 @@
+My Exercise Plan Page
+<!Doctype html>
+<head>
+    <title>Flex - My Exercise Plan</title>
+</head>
+<body>
+    <h1>My Exercise Plan</h1>
+
+    {% if plan %}
+    <ul>
+        {% for exercise in plan %}
+        <li>
+            <strong>{{ exercise.name }}</strong><br>
+            Muscle: {{ exercise.muscle }}<br>
+            Difficulty: {{ exercise.level }}<br>
+            <a href="{{ exercise.video_url }}">Watch Instructions</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No exercises have been added to My Exercise Plan</p>
+    {% endif %}
+    <br>
+    <br><a href="/">Go to Home Page</a>
+</body> 
+</html>
