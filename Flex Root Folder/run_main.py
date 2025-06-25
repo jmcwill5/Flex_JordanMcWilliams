@@ -42,7 +42,7 @@ def add_to_plan():
         'name': request.form['name'],
         'muscle': request.form['muscle'],
         'level': request.form['level'],
-        'instructions': request.form['video_url']
+        'instructions': request.form['instructions']
     }
 
     if exercise not in plan:
