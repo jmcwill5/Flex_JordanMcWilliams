@@ -8,9 +8,9 @@ os.chdir(os.path.dirname(os.path.abspath(__file__))) # change working directory 
 print("Current working directory:", os.getcwd())
 
 # load dataframe once globally
-dfg = pd.read_csv('Flex_JordanMcWilliams/data/exercises.csv', encoding='latin1')
-dfg['primaryMuscles'] = df['primaryMuscles'].str.lower()
-dfg['level'] = df['level'].str.lower()
+dfg = pd.read_csv('data/exercises.csv', encoding='latin1')
+dfg['primaryMuscles'] = dfg['primaryMuscles'].str.lower()
+dfg['level'] = dfg['level'].str.lower()
 
 @app.route('/')
 # route to home page
