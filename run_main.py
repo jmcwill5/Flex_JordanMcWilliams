@@ -16,7 +16,7 @@ def search():
     level = request.args.get('level', '').lower()
 
     # load exercises data
-    df = pd.read_csv('Flex_JordanMcWilliams/Flex Root Folder/data/exercises.csv', encoding='latin1') # Encoding suggested by ChatGPT to fix error
+    df = pd.read_csv('Flex_JordanMcWilliams/data/exercises.csv', encoding='latin1') # Encoding suggested by ChatGPT to fix error
     
     df['primaryMuscles'] = df['primaryMuscles'].str.lower()
     df['level'] = df['level'].str.lower()
