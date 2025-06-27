@@ -2,7 +2,15 @@ from flask import Flask, render_template, request, redirect, url_for
 import pandas as pd
 
 app = Flask(__name__)
-         
+
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__))) # change working directory to the directory of this script
+print("Current working directory:", os.getcwd())
+
+# load dataframe once globally
+dfg = pd.read_csv('Flex_JordanMcWilliams/data/exercises.csv', encoding='latin1')
+dfg['primaryMuscles'] = df['primaryMuscles'].str.lower()
+dfg['level'] = df['level'].str.lower()
 
 @app.route('/')
 # route to home page
@@ -15,9 +23,9 @@ def search():
     muscle = request.args.get('muscle', '').lower()
     level = request.args.get('level', '').lower()
 
-    # load exercises data
-    df = pd.read_csv('Flex_JordanMcWilliams/data/exercises.csv', encoding='latin1') # Encoding suggested by ChatGPT to fix error
-    
+    # use a copy to avoid modifying the global dataframe
+    df = dfg.copy()
+
     df['primaryMuscles'] = df['primaryMuscles'].str.lower()
     df['level'] = df['level'].str.lower()
 
@@ -55,4 +63,4 @@ def view_plan():
     return render_template('my_exercise_plan.html', plan=plan)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
