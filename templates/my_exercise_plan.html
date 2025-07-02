@@ -6,6 +6,8 @@ My Exercise Plan Page
 <body>
     <h1>My Exercise Plan</h1>
 
+    <button onclick="window.print()">Print or Save My Exercise Plan</button>
+
     {% if plan %}
     <ul>
         {% for exercise in plan %}
@@ -13,7 +15,7 @@ My Exercise Plan Page
             <strong>{{ exercise.name }}</strong><br>
             Muscle: {{ exercise.muscle }}<br>
             Difficulty: {{ exercise.level }}<br>
-            <a href="{{ exercise.video_url }}">Watch Instructions</a>
+            Instructions: {{ exercise.instructions }}<br>
         </li>
         {% endfor %}
     </ul>
