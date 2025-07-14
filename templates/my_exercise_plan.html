@@ -16,6 +16,15 @@ My Exercise Plan Page
             Muscle: {{ exercise.muscle }}<br>
             Difficulty: {{ exercise.level }}<br>
             Instructions: {{ exercise.instructions }}<br>
+
+            <form action="{{ url_for('delete_from_plan') }}" method="post" style="display:inline;">
+            <input type="hidden" name="name" value="{{ exercise.name }}">
+            <input type="hidden" name="muscle" value="{{ exercise.muscle }}">
+            <input type="hidden" name="level" value="{{ exercise.level }}">
+            <input type="hidden" name="instructions" value="{{ exercise.instructions }}">
+            <button type="submit">Delete</button>
+        </form>
+        
         </li>
         {% endfor %}
     </ul>

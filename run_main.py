@@ -62,5 +62,20 @@ def add_to_plan():
 def view_plan():
     return render_template('my_exercise_plan.html', plan=plan)
 
+@app.route('/delete_from_plan', methods=['POST'])
+# option to delete exercises from "my exercise plan"
+def delete_from_plan():
+    exercise_delete = {
+        'name': request.form['name'],
+        'muscle': request.form['muscle'],
+        'level': request.form['level'],
+        'instructions': request.form['instructions']
+    }
+
+    global plan
+    plan = [ex for ex in plan if ex != exercise_delete]
+
+    return redirect(url_for('view_plan'))
+
 if __name__ == '__main__':
     app.run(debug=False)
