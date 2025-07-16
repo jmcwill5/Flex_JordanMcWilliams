@@ -1,4 +1,3 @@
-Home Page
 <!Doctype html>
 <head>
     <title>Flex - Home Page</title>
@@ -7,178 +6,46 @@ Home Page
     <h1>Flex</h1>
     <p>Build your own exercise plan.</p>
 
-<div style="position: relative; width:600px; height:450px;">
-  <img src="/static/images/muscle_map.jpeg" alt="muscle_map" style="width:100%; height:100%;">
-
- <!-- I tried to use ChatGPT to help me position the buttons, but I am struggling to align them with
-  the words. Can you help with this?-->
-
- <!-- neck -->
-  <form action="/search" method="get" style="position: absolute; top: 30px; left: 80px;">
-    <input type="hidden" name="muscle" value="neck">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Neck" style="width: 50px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- traps (front) -->
-  <form action="/search" method="get" style="position: absolute; top: 50px; left: 90px;">
-    <input type="hidden" name="muscle" value="traps">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Traps" style="width: 50px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- shoulders (front) -->
-  <form action="/search" method="get" style="position: absolute; top: 70px; left: 100px;">
-    <input type="hidden" name="muscle" value="shoulders">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Shoulders" style="width: 65px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- chest -->
-  <form action="/search" method="get" style="position: absolute; top: 95px; left: 105px;">
-    <input type="hidden" name="muscle" value="chest">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Chest" style="width: 50px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- biceps -->
-  <form action="/search" method="get" style="position: absolute; top: 115px; left: 110px;">
-    <input type="hidden" name="muscle" value="biceps">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Biceps" style="width: 55px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- forearms (front) -->
-  <form action="/search" method="get" style="position: absolute; top: 135px; left: 115px;">
-    <input type="hidden" name="muscle" value="forearms">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Forearms" style="width: 75px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- abdominals -->
-  <form action="/search" method="get" style="position: absolute; top: 175px; left: 115px;">
-    <input type="hidden" name="muscle" value="abdominals">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Abdominals" style="width: 90px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- quadriceps -->
-  <form action="/search" method="get" style="position: absolute; top: 235px; left: 115px;">
-    <input type="hidden" name="muscle" value="quadriceps">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Quadriceps" style="width: 85px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- calves (front) -->
-  <form action="/search" method="get" style="position: absolute; top: 295px; left: 115px;">
-    <input type="hidden" name="muscle" value="calves">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Calves" style="width: 70px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- traps (back) -->
-  <form action="/search" method="get" style="position: absolute; top: 30px; left: 400px;">
-    <input type="hidden" name="muscle" value="traps">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Traps (Back)" style="width: 60px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- shoulders (back) -->
-  <form action="/search" method="get" style="position: absolute; top: 60px; left: 410px;">
-    <input type="hidden" name="muscle" value="shoulders">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Shoulders (Back)" style="width: 65px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- lats -->
-  <form action="/search" method="get" style="position: absolute; top: 90px; left: 420px;">
-    <input type="hidden" name="muscle" value="lats">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Lats" style="width: 40px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- triceps -->
-  <form action="/search" method="get" style="position: absolute; top: 115px; left: 425px;">
-    <input type="hidden" name="muscle" value="triceps">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Triceps" style="width: 55px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- forearms (back) -->
-  <form action="/search" method="get" style="position: absolute; top: 135px; left: 430px;">
-    <input type="hidden" name="muscle" value="forearms">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Forearms (Back)" style="width: 75px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- middle back -->
-  <form action="/search" method="get" style="position: absolute; top: 165px; left: 395px;">
-    <input type="hidden" name="muscle" value="middle back">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Middle Back" style="width: 90px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- lower back -->
-  <form action="/search" method="get" style="position: absolute; top: 205px; left: 440px;">
-    <input type="hidden" name="muscle" value="lower back">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Lower Back" style="width: 90px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- glutes -->
-  <form action="/search" method="get" style="position: absolute; top: 245px; left: 435px;">
-    <input type="hidden" name="muscle" value="glutes">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Glutes" style="width: 60px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- hamstrings -->
-  <form action="/search" method="get" style="position: absolute; top: 285px; left: 430px;">
-    <input type="hidden" name="muscle" value="hamstrings">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Hamstrings" style="width: 85px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-
-  <!-- calves (back) -->
-  <form action="/search" method="get" style="position: absolute; top: 325px; left: 420px;">
-    <input type="hidden" name="muscle" value="calves">
-    <input type="hidden" name="level" value="all">
-    <button type="submit" title="Calves (Back)" style="width: 70px; height: 20px; background: transparent; border: 1px solid black;"></button>
-  </form>
-</div>
-
-<form action = "/search" method = "get">
-    <label for="search">Search for exercises by muscle name:</label>
-        <select id="search" name="muscle">
-        <option value="">--Select a muscle--</option>
-        <option value="abdominals">Abdominals</option>
-        <option value="biceps">Biceps</option>
-        <option value="calves">Calves</option>
-        <option value="chest">Chest</option>
-        <option value="forearms">Forearms</option>
-        <option value="glutes">Glutes</option>
-        <option value="hamstrings">Hamstrings</option>
-        <option value="lats">Lats</option>
-        <option value="lower back">Lower Back</option>
-        <option value="middle back">Middle Back</option>
-        <option value="neck">Neck</option>
-        <option value="quadriceps">Quadriceps</option>
-        <option value="shoulders">Shoulders</option>
-        <option value="traps">Traps</option>
-        <option value="triceps">Triceps</option>
-    </select>
-    <br><br>
-
-    <label for="level"> Select exercise difficulty:</label>
+<form id="searchForm" action="/search" method="get">
+    <label for="level">Select exercise difficulty:</label>
     <select id="level" name="level">
         <option value="beginner">Beginner</option>
         <option value="intermediate">Intermediate</option>
         <option value="expert">Expert</option>
         <option value="all">All</option>
     </select>
-    <br><br>
-
-        <button type="submit">Search</button>
-    </form>
-    </body> 
+    <input type="hidden" name="muscle" id="muscleInput" value="">
+    <div style="position: relative; width:600px; height:450px; margin-top: 10px;">   
+        <img src="/static/images/muscle_map.jpeg" alt="muscle_map" style="width:100%; height:100%;">
+        <!-- muscle buttons -->
+        <button type="button" style="position: absolute; top: 7px; left: 66px; width: 40.62px; height: 20.31px;" onclick="submitMuscle('neck')">Neck</button>
+        <button type="button" style="position: absolute; top: 37px; left: 61px; width: 44.90px; height: 24.05px;" onclick="submitMuscle('traps')">Traps</button>
+        <button type="button" style="position: absolute; top: 70px; left: 36px; width: 69.49px; height: 22.99px;" onclick="submitMuscle('shoulders')">Shoulders</button>
+        <button type="button" style="position: absolute; top: 106px; left: 65px; width: 42.23px; height: 19.24px;" onclick="submitMuscle('chest')">Chest</button>
+        <button type="button" style="position: absolute; top: 137px; left: 52px; width: 51.32px; height: 21.92px;" onclick="submitMuscle('biceps')">Biceps</button>
+        <button type="button" style="position: absolute; top: 176px; left: 40px; width: 61.47px; height: 19.24px;" onclick="submitMuscle('forearms')">Forearms</button>
+        <button type="button" style="position: absolute; top: 232px; left: 22px; width: 78.04px; height: 25.66px;" onclick="submitMuscle('abdominals')">Abdominals</button>
+        <button type="button" style="position: absolute; top: 273px; left: 22px; width: 79.65px; height: 17.11px;" onclick="submitMuscle('quadriceps')">Quadriceps</button>
+        <button type="button" style="position: absolute; top: 302px; left: 55px; width: 51.85px; height: 19.24px;" onclick="submitMuscle('calves')">Calves</button>
+        <button type="button" style="position: absolute; top: 35px; left: 266px; width: 84.46px; height: 21.92px;" onclick="submitMuscle('middle back')">Middle Back</button>
+        <button type="button" style="position: absolute; top: 2px; left: 494px; width: 41.16px; height: 21.92px;" onclick="submitMuscle('traps')">Traps</button>
+        <button type="button" style="position: absolute; top: 40px; left: 496px; width: 69.49px; height: 20.31px;" onclick="submitMuscle('shoulders')">Shoulders</button>
+        <button type="button" style="position: absolute; top: 73px; left: 495px; width: 36.35px; height: 21.92px;" onclick="submitMuscle('lats')">Lats</button>
+        <button type="button" style="position: absolute; top: 111px; left: 500px; width: 49.18px; height: 21.38px;" onclick="submitMuscle('triceps')">Triceps</button>
+        <button type="button" style="position: absolute; top: 154px; left: 497px; width: 65.75px; height: 22.45px;" onclick="submitMuscle('forearms')">Forearms</button>
+        <button type="button" style="position: absolute; top: 194px; left: 499px; width: 74.30px; height: 21.38px;" onclick="submitMuscle('lower back')">Lower Back</button>
+        <button type="button" style="position: absolute; top: 231px; left: 496px; width: 43.30px; height: 18.71px;" onclick="submitMuscle('glutes')">Glutes</button>
+        <button type="button" style="position: absolute; top: 267px; left: 499px; width: 79.11px; height: 19.24px;" onclick="submitMuscle('hamstrings')">Hamstrings</button>
+        <button type="button" style="position: absolute; top: 302px; left: 499px; width: 47.57px; height: 21.38px;" onclick="submitMuscle('calves')">Calves</button>
+    </div>
+</form>
+<script>
+// submits both the level value and the muscle value
+function submitMuscle(muscle) {
+    document.getElementById('muscleInput').value = muscle;
+    document.getElementById('searchForm').submit();
+}
+</script>
+</div>
+</body> 
 </html>
