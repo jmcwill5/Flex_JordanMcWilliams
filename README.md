@@ -6,7 +6,9 @@ Flex is an app that provides exercises for specific targeted muscle groups. Firs
 1. Download Python 3
 2. Clone the repository
 3. pip install flask pandas
-4. Run the file called "run_main.py" and open "http://127.0.0:5000" in your browser
+4. Run the file called "run_main.py"
+      - python run_main.py (if using terminal)
+6. Open "http://127.0.0:5000" in your browser
    <img width="1444" height="220" alt="Screenshot 2025-08-05 at 10 49 44 PM" src="https://github.com/user-attachments/assets/92259a25-8001-4dbf-99e0-d53771f806ba" /> 
 
 **Using the App**
